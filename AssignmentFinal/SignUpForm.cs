@@ -73,6 +73,7 @@ namespace AssignmentFinal
                             MaleRadioButton.Checked = false;
                             FemaleRadioButton.Checked = false;
                             checkBox1.Checked = false;
+
                         }
                         else
                         {
