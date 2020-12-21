@@ -41,5 +41,10 @@ namespace AssignmentFinal
             Form1 f = new Form1();
             f.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
