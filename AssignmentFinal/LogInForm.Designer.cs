@@ -60,6 +60,7 @@ namespace AssignmentFinal
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(272, 262);
             this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(354, 26);
             this.PasswordTextBox.TabIndex = 2;
             // 

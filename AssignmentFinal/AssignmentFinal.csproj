@@ -76,6 +76,7 @@
     <Compile Include="SignUpForm.Designer.cs">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\downloadolllll.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\83f937b69f30bb886ab8a03390da6771.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
