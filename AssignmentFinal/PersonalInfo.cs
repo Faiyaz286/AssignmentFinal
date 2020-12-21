@@ -12,11 +12,13 @@ namespace AssignmentFinal
 {
     public partial class PersonalInfo : Form
     {
+        User user1;
         public PersonalInfo(User user)
         {
             
             InitializeComponent();
             WelcomeLabel.Text+=" "+user.Name+"'s Diary";
+            user1 = user;
         }
 
         private void PersonalInfo_FormClosing(object sender, FormClosingEventArgs e)
@@ -29,6 +31,13 @@ namespace AssignmentFinal
             LogInForm lg = new LogInForm();
             lg.Show();
             this.Hide();
+        }
+
+        private void UpdateProfileButton_Click(object sender, EventArgs e)
+        {
+            Profile p = new Profile(user1);
+            this.Hide();
+            p.Show();
         }
     }
 }

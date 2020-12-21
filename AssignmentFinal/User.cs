@@ -10,6 +10,7 @@ namespace AssignmentFinal
 {
     public class User
     {
+        private int id;
         private string name;
         private string userName;
         private string email;
@@ -20,8 +21,9 @@ namespace AssignmentFinal
 
 
 
-        public User(string name, string userName, string email, string password, string dob, string gender, string bloodGroup)
+        public User(int id,string name, string userName, string email, string password, string dob, string gender, string bloodGroup)
         {
+            this.id = id;
             this.name = name;
             this.userName = userName;
             this.email = email;
@@ -32,7 +34,7 @@ namespace AssignmentFinal
         }
 
 
-
+        public int ID { get => id; }
         public string Name { get => name; set => name = value; }
         public string UserName { get => userName; set => userName = value; }
         public string Email { get => email; set => email = value; }
