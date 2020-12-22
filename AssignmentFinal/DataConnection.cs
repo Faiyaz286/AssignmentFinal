@@ -16,14 +16,14 @@ namespace AssignmentFinal
         SqlConnection connection;
         SqlCommand command;
 
-
+        public SqlConnection Connection { get => connection; set => connection = value; }
 
         public DataConnection()
         {
             try
             {
-                this.connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DigitalDiary"].ConnectionString);
-                this.connection.Open();
+                this.Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DigitalDiary"].ConnectionString);
+                this.Connection.Open();
             }
             catch (Exception e)
             {
@@ -36,28 +36,35 @@ namespace AssignmentFinal
 
         public SqlDataReader GetData(string sql)
         {
-            this.command = new SqlCommand(sql, this.connection);
+            this.command = new SqlCommand(sql, this.Connection);
             SqlDataReader reader = this.command.ExecuteReader();
             //this.connection.Close();
             return reader;
         }
 
+        public int ExecuteQuery(SqlCommand command)
+        {
+            this.command = command;
+            int result = this.command.ExecuteNonQuery();
+            this.Connection.Close();
+            return result;
+        }
 
 
         public int ExecuteQuery(string sql)
         {
-            this.command = new SqlCommand(sql, this.connection);
+            this.command = new SqlCommand(sql, this.Connection);
             int result = this.command.ExecuteNonQuery();
-            this.connection.Close();
+            this.Connection.Close();
             return result;
         }
         public void CloseConnection()
         {
-            this.connection.Close();
+            this.Connection.Close();
         }
         public void Dispose()
         {
-            this.connection.Close();
+            this.Connection.Close();
         }
     }
 }

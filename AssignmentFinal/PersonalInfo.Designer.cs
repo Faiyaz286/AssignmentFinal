@@ -33,6 +33,7 @@ namespace AssignmentFinal
             this.LogOutButton = new System.Windows.Forms.Button();
             this.UpdateProfileButton = new System.Windows.Forms.Button();
             this.ChangePasswordButton = new System.Windows.Forms.Button();
+            this.ChangeDatabutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // WelcomeLabel
@@ -84,6 +85,20 @@ namespace AssignmentFinal
             this.ChangePasswordButton.TabIndex = 3;
             this.ChangePasswordButton.Text = "Change Password";
             this.ChangePasswordButton.UseVisualStyleBackColor = false;
+            this.ChangePasswordButton.Click += new System.EventHandler(this.ChangePasswordButton_Click);
+            // 
+            // ChangeDatabutton
+            // 
+            this.ChangeDatabutton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.ChangeDatabutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ChangeDatabutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ChangeDatabutton.Location = new System.Drawing.Point(568, 203);
+            this.ChangeDatabutton.Name = "ChangeDatabutton";
+            this.ChangeDatabutton.Size = new System.Drawing.Size(220, 40);
+            this.ChangeDatabutton.TabIndex = 4;
+            this.ChangeDatabutton.Text = "Create Event";
+            this.ChangeDatabutton.UseVisualStyleBackColor = false;
+            this.ChangeDatabutton.Click += new System.EventHandler(this.ChangeDatabutton_Click);
             // 
             // PersonalInfo
             // 
@@ -91,6 +106,7 @@ namespace AssignmentFinal
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AssignmentFinal.Properties.Resources._83f937b69f30bb886ab8a03390da6771;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ChangeDatabutton);
             this.Controls.Add(this.ChangePasswordButton);
             this.Controls.Add(this.UpdateProfileButton);
             this.Controls.Add(this.LogOutButton);
@@ -111,5 +127,6 @@ namespace AssignmentFinal
         private System.Windows.Forms.Button LogOutButton;
         private System.Windows.Forms.Button UpdateProfileButton;
         private System.Windows.Forms.Button ChangePasswordButton;
+        private System.Windows.Forms.Button ChangeDatabutton;
     }
 }
